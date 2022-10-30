@@ -7,43 +7,39 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<header>
-  <div class="header_div>">
-    <div class="header_tech">
-      <h1>
-        <a href="index.html">TECH</a>
-      </h1>
-      <nav class="header-nav">
-        <ul>
-          <li class="top_li">
-            <a href="index.html">ホーム</a>
-          </li>
-          <li class="top_li">
-            <a href="service.html">事業内容</a>
-          </li>
-          <li class="top_li">
-            <a href="blog.html">社員ブログ</a>
-          </li>
-          <li class="top_li">
-            <a href="company.html">会社概要</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="menu" id="menu">
-      <span class="menu__line--top"></span>
-      <span class="menu__line--middle"></span>
-      <span class="menu__line--bottom"></span>
-    </div>
-    <nav class="drawer-nav" id="drawer-nav">
-      <ul class="drawer-nav-list">
-        <li class="drawer-nav-item"><a href="index.html">ホーム</a></li>
-        <li class="drawer-nav-item"><a href="service.html">事業内容</a></li>
-        <li class="drawer-nav-item"><a href="blog.html">社員ブログ</a></li>
-        <li class="drawer-nav-item"><a href="company.html">会社概要</a></li>
-      </ul>
-    </nav>
+<header class="header">
+  <h1>
+    <a href="index.html">TECH</a>
+  </h1>
+  <nav class="header-nav">
+    <ul>
+      <li class="top_li">
+        <a href="index.html">ホーム</a>
+      </li>
+      <li class="top_li">
+        <a href="company.html">事業内容</a>
+      </li>
+      <li class="top_li">
+        <a href="blog.html">社員ブログ</a>
+      </li>
+      <li class="top_li">
+        <a href="service.html">会社概要</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="menu" id="menu">
+    <span class="menu__line--top"></span>
+    <span class="menu__line--middle"></span>
+    <span class="menu__line--bottom"></span>
   </div>
+  <nav class="drawer-nav" id="drawer-nav">
+    <ul class="drawer-nav-list">
+      <li class="drawer-nav-item"><a href="index.html" class="a_drawer">ホーム</a></li>
+      <li class="drawer-nav-item"><a href="company.html" class="a_drawer">事業内容</a></li>
+      <li class="drawer-nav-item"><a href="blog.html" class="a_drawer">社員ブログ</a></li>
+      <li class="drawer-nav-item"><a href="service.html" class="a_drawer">会社概要</a></li>
+    </ul>
+  </nav>
 </header>
 <main>
   <div class="top">
@@ -80,7 +76,44 @@
       <div class="otoiawase">
         <h2>お問い合わせ</h2>
         <p>お仕事のご依頼や採用に関してはお問い合わせにて承っております。</p>
-        <input type="button" id="otoiawaseBtn" value="お問い合わせ" class="btn">
+        <input type="button" id="openBtn" value="お問い合わせ" class="openBtn bottom-contact-btn btn btn-primary">
+        <div id="modal" class="modal">
+          <div class="modal__content">
+            <div class="modal__content-inner">
+              <div class="btn_div">
+                <input type="button" id="closeBtn" value="×" class="closebtn">
+              </div>
+              <h2>お問い合わせ</h2>
+              <form class="form_otoiawase">
+                <div class="otoiawaseA">
+                  <lavel>会社名
+                    <span class="form-required">*</span>
+                  </lavel>
+                  <input type="text" class="text_form">
+                </div>
+                <div class="otoiawaseA">
+                  <lavel>お名前
+                    <span class="form-required">*</span>
+                  </lavel>
+                  <input type="name" class="text_form">
+                </div>
+                <div class="otoiawaseA">
+                  <lavel>メールアドレス
+                    <span class="form-required">*</span>
+                  </lavel>
+                  <input type="email" class="text_form">
+                </div>
+                <div class="otoiawaseA">
+                  <lavel>お問い合わせ内容
+                    <span class="form-required">*</span>
+                  </lavel>
+                  <textarea class="textarea_form" rows="8" cols="80" required></textarea>
+                </div>
+                <input type="submit" value="お申し込み" class="form_submit">
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
 </main>
   <footer>
@@ -104,7 +137,8 @@
         </ul>
       </nav>
     </div>
-  </footer>
     <button class="scroll-top" id="button">↑</button>
+</footer>
+<script src="js/main.js"></script>
 </body>
 </html>
